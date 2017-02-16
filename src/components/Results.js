@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/Results.css';
 import ImageResult from './ImageResult';
 import VideoPlayer from './VideoPlayer';
+import Header from './Header';
 import data from '../data';
 
 class Results extends Component {
@@ -62,6 +63,7 @@ class Results extends Component {
   render() {
     return (
       <div>
+        <Header />
         <div className="Results-heading">
           <h2>Videos</h2>
         </div>
