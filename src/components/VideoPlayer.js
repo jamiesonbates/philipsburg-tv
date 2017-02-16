@@ -7,7 +7,7 @@ class VideoPlayer extends Component {
   }
 
   render() {
-    const iframesrc = 'https://www.youtube.com/embed/' + this.props.src + '?color=white&rel=0&showinfo=0&autoplay=1';
+    const iframesrc = 'https://www.youtube.com/embed/' + this.props.video.YouTubeId + '?color=white&rel=0&showinfo=0&autoplay=1';
 
     return (
       <div className="VideoPlayer-container">

@@ -72,10 +72,10 @@ class Results extends Component {
             })
             .map(video => {
               if (video.clicked) {
-                return <VideoPlayer key={video.YouTubeId} src={video.YouTubeId} />
+                return <VideoPlayer key={video.YouTubeId} video={video} />
               }
 
-              return <ImageResult divisor={this.state.divisor} loadVideo={this.loadVideo} key={video.YouTubeId} src={video.YouTubeId} />
+              return <ImageResult key={video.YouTubeId} divisor={this.state.divisor} loadVideo={this.loadVideo} video={video} />
             })
         }
       </div>
