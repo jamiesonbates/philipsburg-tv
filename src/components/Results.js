@@ -29,13 +29,15 @@ class Results extends Component {
       return video;
     });
 
-    const clicked = this.state.videos.filter(video => video.clicked);
-    let idx = nextData.indexOf(clicked[0]);
-    nextData.splice(idx, 1);
-    const changeBy = (idx % this.state.divisor);
-    idx -= changeBy;
+    if (this.state.divisor !== 0) {
+      const clicked = this.state.videos.filter(video => video.clicked);
+      let idx = nextData.indexOf(clicked[0]);
+      nextData.splice(idx, 1);
+      const changeBy = (idx % this.state.divisor);
+      idx -= changeBy;
 
-    nextData = nextData.slice(0, idx).concat(clicked, nextData.slice(idx));
+      nextData = nextData.slice(0, idx).concat(clicked, nextData.slice(idx));
+    }
 
     this.setState({ videos: nextData, videoIsClicked: true });
   }
@@ -59,24 +61,29 @@ class Results extends Component {
 
   render() {
     return (
-      <div className="results">
-        {
-          this.state.videos
-            .map(video => {
-              if (!this.state.videoIsClicked) {
-                video.clicked = false;
-              }
+      <div>
+        <div className="Results-heading">
+          <h2>Videos</h2>
+        </div>
+        <div className="results">
+          {
+            this.state.videos
+              .map(video => {
+                if (!this.state.videoIsClicked) {
+                  video.clicked = false;
+                }
 
-              return video;
-            })
-            .map(video => {
-              if (video.clicked) {
-                return <VideoPlayer key={video.YouTubeId} video={video} />
-              }
+                return video;
+              })
+              .map(video => {
+                if (video.clicked) {
+                  return <VideoPlayer key={video.YouTubeId} video={video} />
+                }
 
-              return <ImageResult key={video.YouTubeId} divisor={this.state.divisor} loadVideo={this.loadVideo} video={video} />
-            })
-        }
+                return <ImageResult key={video.YouTubeId} divisor={this.state.divisor} loadVideo={this.loadVideo} video={video} />
+              })
+          }
+        </div>
       </div>
     )
   }
