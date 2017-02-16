@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import '../css/ImageResult.css';
 
 class ImageResult extends Component {
@@ -23,6 +24,7 @@ class ImageResult extends Component {
             </div>
             <div className="ImageResult-video">
               <h5>Views</h5>
+              <Link to=`/organization/:${this.props.video.YouTubeId}`>Go to Org</Link>
             </div>
           </div>
         </div>
