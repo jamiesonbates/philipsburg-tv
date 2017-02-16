@@ -1,0 +1,32 @@
+.ImageResult-container {
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1%;
+}
+
+.ImageResult-card {
+  height: 100%;
+  width: 90%;
+  box-shadow: 0 1px 3px 1px gray;
+}
+
+.ImageResult-img-details {
+  padding: 2%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.ImageResult-video {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+img {
+  width: 100%;
+}

@@ -11,7 +11,7 @@ class Results extends Component {
     this.state = {
       videos: data,
       videoIsClicked: false,
-      divisor: Math.floor((window.innerWidth * 0.9) / 300)
+      divisor: Math.floor((window.innerWidth * 0.9) / 600)
     }
 
     this.loadVideo = this.loadVideo.bind(this);
@@ -41,9 +41,8 @@ class Results extends Component {
   }
 
   updateDimensions() {
-    const nextDivisor = Math.floor((window.innerWidth * 0.9) / 300);
+    const nextDivisor = Math.floor((window.innerWidth * 0.9) / 400);
     this.setState({ divisor: nextDivisor});
-    this.forceUpdate(() => console.log('here'))
   }
 
   componentWillMount() {
