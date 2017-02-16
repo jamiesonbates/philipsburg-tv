@@ -15,6 +15,11 @@ class Results extends Component {
     }
 
     this.loadVideo = this.loadVideo.bind(this);
+    this.recalcDivisor = this.recalcDivisor.bind(this);
+  }
+
+  recalcDivisor() {
+    this.setState({ divisor: Math.floor((window.innerWidth * 0.9) / 300)});
   }
 
   loadVideo(id) {
@@ -41,6 +46,10 @@ class Results extends Component {
     this.setState({ videos: nextData, videoIsClicked: true });
   }
 
+  forceUpdate() {
+    this.
+  }
+
   render() {
     return (
       <div className="results">
@@ -64,6 +73,6 @@ class Results extends Component {
       </div>
     )
   }
-
 }
+
 export default Results;
