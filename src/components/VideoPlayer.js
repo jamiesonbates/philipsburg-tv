@@ -6,7 +6,7 @@ class VideoPlayer extends Component {
     super(props);
 
     this.state = {
-      iframesrc: 'https://www.youtube.com/embed/' + this.props.src + '?color=white&rel=0&showinfo=0'
+      iframesrc: 'https://www.youtube.com/embed/' + this.props.src + '?color=white&rel=0&showinfo=0&autoplay=1'
     }
   }
 

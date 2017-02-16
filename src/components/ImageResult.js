@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/VideoResult.css';
 
+
 class ImageResult extends Component {
   constructor(props) {
     super(props);

@@ -10,7 +10,8 @@ class Results extends Component {
 
     this.state = {
       videos: data,
-      videoIsClicked: false
+      videoIsClicked: false,
+      divisor: Math.floor((window.innerWidth * 0.9) / 300)
     }
 
     this.loadVideo = this.loadVideo.bind(this);
@@ -30,7 +31,7 @@ class Results extends Component {
     const clicked = this.state.videos.filter(video => video.clicked);
     let idx = nextData.indexOf(clicked[0]);
     nextData.splice(idx, 1);
-    const changeBy = (idx % 4);
+    const changeBy = (idx % this.state.divisor);
     idx -= changeBy;
 
     nextData = nextData.slice(0, idx).concat(clicked, nextData.slice(idx));
