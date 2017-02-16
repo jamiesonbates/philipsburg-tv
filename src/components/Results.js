@@ -36,8 +36,6 @@ class Results extends Component {
     idx -= changeBy;
 
     nextData = nextData.slice(0, idx).concat(clicked, nextData.slice(idx));
-    console.log(nextData);
-
 
     this.setState({ videos: nextData, videoIsClicked: true });
   }
