@@ -58,7 +58,7 @@ class Results extends Component {
                 return <VideoPlayer key={video.YouTubeId} src={video.YouTubeId} />
               }
 
-              return <ImageResult loadVideo={this.loadVideo} key={video.YouTubeId} src={video.YouTubeId} />
+              return <ImageResult divisor={this.state.divisor} loadVideo={this.loadVideo} key={video.YouTubeId} src={video.YouTubeId} />
             })
         }
       </div>
