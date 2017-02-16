@@ -15,11 +15,7 @@ class Results extends Component {
     }
 
     this.loadVideo = this.loadVideo.bind(this);
-    this.recalcDivisor = this.recalcDivisor.bind(this);
-  }
-
-  recalcDivisor() {
-    this.setState({ divisor: Math.floor((window.innerWidth * 0.9) / 300)});
+    this.updateDimensions = this.updateDimensions.bind(this);
   }
 
   loadVideo(id) {
@@ -46,8 +42,22 @@ class Results extends Component {
     this.setState({ videos: nextData, videoIsClicked: true });
   }
 
-  forceUpdate() {
-    this.
+  updateDimensions() {
+    const nextDivisor = Math.floor((window.innerWidth * 0.9) / 300);
+    this.setState({ divisor: nextDivisor});
+    this.forceUpdate(() => console.log('here'))
+  }
+
+  componentWillMount() {
+    this.updateDimensions();
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
   render() {
