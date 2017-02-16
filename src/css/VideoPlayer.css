@@ -1,9 +1,30 @@
 .VideoPlayer-container {
   height: 60vh;
-  width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.VideoPlayer-details {
+  width: 30%;
 }
 
 iframe {
   height: 100%;
-  width: 100%;
+  width: 60%;
+}
+
+@media (max-width: 800px) {
+  .VideoPlayer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  iframe {
+    width: 90%;
+  }
+
+  .VideoPlayer-details {
+    width: 90%;
+  }
 }

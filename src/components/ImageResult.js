@@ -15,7 +15,6 @@ class ImageResult extends Component {
         <div className="ImageResult-card">
           <div>
             <img onClick={() => this.props.loadVideo(this.props.video.YouTubeId)} src={imgsrc} />
-            <i></i>
           </div>
           <div className="ImageResult-img-details">
             <div className="ImageResult-video-info">
@@ -24,7 +23,6 @@ class ImageResult extends Component {
             </div>
             <div className="ImageResult-video">
               <h5>Views</h5>
-              <button onClick={() => this.props.loadVideo(this.props.video.YouTubeId)}>Play Video</button>
             </div>
           </div>
         </div>
