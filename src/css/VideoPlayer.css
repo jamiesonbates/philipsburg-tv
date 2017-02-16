@@ -1,0 +1,9 @@
+.VideoPlayer-container {
+  height: 60vh;
+  width: 80%;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}

@@ -5264,3 +5264,7 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
+
+youtube-react@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/youtube-react/-/youtube-react-0.0.1.tgz#6e54e7b2574196ebd48632ffa7661ab9b440c64c"
