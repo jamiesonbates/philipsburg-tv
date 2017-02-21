@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Results from './Results';
+import Footer from './Footer';
 import axios from 'axios';
 import '../css/LandingPage.css';
 
@@ -76,6 +77,7 @@ class LandingPage extends Component {
           videos={this.state.videos}
           loadVideo={this.loadVideo} videoIsClicked={this.state.videoIsClicked} divisor={this.state.divisor}
         />
+        <Footer />
       </div>
     );
   }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import '../css/Organization.css';
 import Header from './Header';
 import Results from './Results';
+import Footer from './Footer';
 import axios from 'axios';
+import '../css/Organization.css';
 
 class Organization extends Component {
   constructor() {
@@ -83,6 +84,7 @@ class Organization extends Component {
           videos={this.state.videos}
           loadVideo={this.loadVideo} videoIsClicked={this.state.videoIsClicked} divisor={this.state.divisor}
         />
+        <Footer />
       </div>
     )
   }
