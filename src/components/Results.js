@@ -9,12 +9,6 @@ class Results extends Component {
   constructor() {
     super();
 
-    this.state = {
-      videos: [],
-      videoIsClicked: false,
-      divisor: Math.floor((window.innerWidth * 0.9) / 600)
-    }
-
     this.loadVideo = this.loadVideo.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
   }
@@ -70,10 +64,10 @@ class Results extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <div className="Results-heading">
+        {/* <Header /> */}
+        {/* <div className="Results-heading">
           <h2>Videos</h2>
-        </div>
+        </div> */}
         <div className="results">
           {
             this.state.videos
