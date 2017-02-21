@@ -26,7 +26,7 @@ class Results extends Component {
                   return <VideoPlayer key={video.youtube_id} video={video} />
                 }
 
-                return <ImageResult key={video.youtube_id} divisor={this.props.divisor} loadVideo={this.props.loadVideo} video={video} />
+                return <ImageResult key={video.youtube_id} divisor={this.props.divisor} loadVideo={this.props.loadVideo} video={video} displayBtn={this.props.displayBtn}/>
               })
           }
         </div>

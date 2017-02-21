@@ -13,7 +13,8 @@ class Organization extends Component {
       organization: {},
       videos: [],
       videoIsClicked: false,
-      divisor: Math.floor((window.innerWidth * 0.9) / 400)
+      divisor: Math.floor((window.innerWidth * 0.9) / 400),
+      displayBtn: false
     }
 
     this.loadVideo = this.loadVideo.bind(this);
@@ -80,10 +81,14 @@ class Organization extends Component {
           <a href={this.state.organization.website}>Website</a>
           <a href={this.state.organization.facebook}>Facebook</a>
         </div>
-        <Results
-          videos={this.state.videos}
-          loadVideo={this.loadVideo} videoIsClicked={this.state.videoIsClicked} divisor={this.state.divisor}
-        />
+        <div className="Organization-videos">
+          <Results
+            videos={this.state.videos}
+            loadVideo={this.loadVideo} videoIsClicked={this.state.videoIsClicked} divisor={this.state.divisor}
+            displayBtn={this.state.displayBtn}
+          />
+        </div>
+        <h3></h3>
         <Footer />
       </div>
     )

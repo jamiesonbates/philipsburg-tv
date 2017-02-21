@@ -12,7 +12,8 @@ class LandingPage extends Component {
     this.state = {
       videos: [],
       videoIsClicked: false,
-      divisor: Math.floor((window.innerWidth * 0.9) / 400)
+      divisor: Math.floor((window.innerWidth * 0.9) / 400),
+      displayBtn: true
     }
 
     this.loadVideo = this.loadVideo.bind(this);
@@ -75,7 +76,9 @@ class LandingPage extends Component {
         </div>
         <Results
           videos={this.state.videos}
-          loadVideo={this.loadVideo} videoIsClicked={this.state.videoIsClicked} divisor={this.state.divisor}
+          loadVideo={this.loadVideo}
+          videoIsClicked={this.state.videoIsClicked} divisor={this.state.divisor}
+          displayBtn={this.state.displayBtn}
         />
         <Footer />
       </div>
