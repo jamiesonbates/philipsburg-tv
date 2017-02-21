@@ -24,7 +24,6 @@ class ImageResult extends Component {
     const imgsrc = 'https://img.youtube.com/vi/' + this.props.video.youtube_id + '/mqdefault.jpg';
     const divWidth = (100 / this.props.divisor) + '%';
     const LinkJSX = LinkDetermination(this.props);
-    console.log(LinkJSX);
 
     return (
       <div className="ImageResult-container" style={{ width: divWidth }}>

@@ -1,1 +1,40 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+.Organization-info {
+  width: 90%;
+  margin: 0 auto;
+  height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.Organization-details {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Organization-img {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Organization-img img {
+  width: 90%;
+}
+
+.Organization-video-header {
+  height: 8vh;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}

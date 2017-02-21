@@ -74,21 +74,31 @@ class Organization extends Component {
     return (
       <div>
         <Header />
-        <div>
-          <h2>{this.state.organization.name}</h2>
-          <p>{this.state.organization.hours}</p>
-          <p>{this.state.organization.phone}</p>
-          <a href={this.state.organization.website}>Website</a>
-          <a href={this.state.organization.facebook}>Facebook</a>
+        <div className="Organization-info">
+          <div className="Organization-details">
+            <h2>{this.state.organization.name}</h2>
+            <p>Hours: {this.state.organization.hours}</p>
+            <p>Phone: {this.state.organization.phone}</p>
+            <p>
+              Website: <a href={this.state.organization.website}>     {this.state.organization.website}</a>
+            </p>
+            <a href={this.state.organization.facebook}>Facebook</a>
+          </div>
+          <div className="Organization-img">
+            <h3>Featured Video (placeholder)</h3>
+            <img src="http://philipsburgmt.com/assets/images/walking_tour.jpg"/>
+          </div>
         </div>
         <div className="Organization-videos">
+          <div className="Organization-video-header">
+            <h2>Videos by {this.state.organization.name}</h2>
+          </div>
           <Results
             videos={this.state.videos}
             loadVideo={this.loadVideo} videoIsClicked={this.state.videoIsClicked} divisor={this.state.divisor}
             displayBtn={this.state.displayBtn}
           />
         </div>
-        <h3></h3>
         <Footer />
       </div>
     )
