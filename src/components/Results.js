@@ -4,13 +4,14 @@ import ImageResult from './ImageResult';
 import VideoPlayer from './VideoPlayer';
 import Header from './Header';
 import data from '../data';
+import axios from 'axios';
 
 class Results extends Component {
   constructor() {
     super();
 
     this.state = {
-      videos: data,
+      videos: [],
       videoIsClicked: false,
       divisor: Math.floor((window.innerWidth * 0.9) / 600)
     }
@@ -50,10 +51,17 @@ class Results extends Component {
 
   componentWillMount() {
     this.updateDimensions();
+
+    axios.get('/api/videos')
+      .then((res) => {
+        const nextVideos = res.data;
+        console.log(nextVideos);
+        this.setState({ videos: nextVideos });
+      });
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.updateDimensions)
+    window.addEventListener('resize', this.updateDimensions);
   }
 
   componentWillUnmount() {
@@ -79,10 +87,10 @@ class Results extends Component {
               })
               .map(video => {
                 if (video.clicked) {
-                  return <VideoPlayer key={video.YouTubeId} video={video} />
+                  return <VideoPlayer key={video.youtube_id} video={video} />
                 }
 
-                return <ImageResult key={video.YouTubeId} divisor={this.state.divisor} loadVideo={this.loadVideo} video={video} />
+                return <ImageResult key={video.youtube_id} divisor={this.state.divisor} loadVideo={this.loadVideo} video={video} />
               })
           }
         </div>

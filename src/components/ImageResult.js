@@ -8,14 +8,14 @@ class ImageResult extends Component {
   }
 
   render() {
-    const imgsrc = 'https://img.youtube.com/vi/' + this.props.video.YouTubeId + '/mqdefault.jpg';
+    const imgsrc = 'https://img.youtube.com/vi/' + this.props.video.youtube_id + '/mqdefault.jpg';
     const divWidth = (100 / this.props.divisor) + '%';
 
     return (
       <div className="ImageResult-container" style={{ width: divWidth }}>
         <div className="ImageResult-card">
           <div>
-            <img onClick={() => this.props.loadVideo(this.props.video.YouTubeId)} src={imgsrc} />
+            <img onClick={() => this.props.loadVideo(this.props.video.youtube_id)} src={imgsrc} />
           </div>
           <div className="ImageResult-img-details">
             <div className="ImageResult-video-info">
