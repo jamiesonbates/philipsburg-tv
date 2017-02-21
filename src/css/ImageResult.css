@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Kameron');
+
 .ImageResult-container {
   min-height: 40vh;
   display: flex;
@@ -32,5 +34,23 @@ img {
 .ImageResult-video {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(155, 2, 34);
+  width: 30%;
+  height: 50%;
+  box-shadow: 0 1px 1px 1px gray;
+  padding: 2.5% 0;
+
+}
+
+.ImageResult-video:hover {
+  background-color: rgb(252, 3, 55)
+}
+
+.ImageResult-btn {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  font-family: 'Kameron';
 }

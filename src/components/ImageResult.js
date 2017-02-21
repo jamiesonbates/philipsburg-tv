@@ -23,7 +23,7 @@ class ImageResult extends Component {
               <h5>{this.props.video.name}</h5>
             </div>
             <div className="ImageResult-video">
-              <Link to={`/organization/${this.props.video.organization_id}`}>Go to Org</Link>
+              <Link className="ImageResult-btn" to={`/organization/${this.props.video.organization_id}`}>All Videos</Link>
             </div>
           </div>
         </div>
