@@ -14,9 +14,7 @@ class ImageResult extends Component {
     return (
       <div className="ImageResult-container" style={{ width: divWidth }}>
         <div className="ImageResult-card">
-          <div>
-            <img onClick={() => this.props.loadVideo(this.props.video.youtube_id)} src={imgsrc} />
-          </div>
+          <img onClick={() => this.props.loadVideo(this.props.video.youtube_id)} src={imgsrc} />
           <div className="ImageResult-img-details">
             <div className="ImageResult-video-info">
               <h3>{this.props.video.title}</h3>

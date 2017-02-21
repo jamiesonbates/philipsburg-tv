@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Caveat+Brush');
+@import url('https://fonts.googleapis.com/css?family=Fontdiner+Swanky');
 
 .Header-container {
   height: 10vh;
@@ -9,5 +9,6 @@
 }
 
 .Header-container h1 {
-  font-family: "Caveat Brush";
+  font-family: "Fontdiner Swanky";
+  font-size:
 }

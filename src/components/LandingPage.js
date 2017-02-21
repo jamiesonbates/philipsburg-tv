@@ -71,7 +71,7 @@ class LandingPage extends Component {
       <div>
         <Header />
         <div className="LandingPage-heading">
-          <h2>Videos</h2>
+          <h2>Videos about Philipsburg</h2>
         </div>
         <Results
           videos={this.state.videos}

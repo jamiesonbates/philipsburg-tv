@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Kameron');
+
 .LandingPage-heading {
-  width: 80%;
+  height: 7vh;
+  width: 85%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.LandingPage-heading h2 {
+  color: #692817;
+  font-family: 'Kameron';
+  font-size: 1.4rem;
 }
