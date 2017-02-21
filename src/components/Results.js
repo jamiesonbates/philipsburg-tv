@@ -3,7 +3,6 @@ import '../css/Results.css';
 import ImageResult from './ImageResult';
 import VideoPlayer from './VideoPlayer';
 import Header from './Header';
-import data from '../data';
 import axios from 'axios';
 
 class Results extends Component {
@@ -21,8 +20,8 @@ class Results extends Component {
   }
 
   loadVideo(id) {
-    let nextData = data.map(video => {
-      if (video.YouTubeId === id) {
+    let nextData = this.state.videos.map(video => {
+      if (video.youtube_id === id) {
         video.clicked = true;
         return video;
       }
@@ -51,6 +50,10 @@ class Results extends Component {
 
   componentWillMount() {
     this.updateDimensions();
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions);
 
     axios.get('/api/videos')
       .then((res) => {
@@ -58,10 +61,6 @@ class Results extends Component {
         console.log(nextVideos);
         this.setState({ videos: nextVideos });
       });
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.updateDimensions);
   }
 
   componentWillUnmount() {
