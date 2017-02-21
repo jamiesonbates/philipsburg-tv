@@ -3,6 +3,5 @@
   margin: 0 auto;
   /*background: #1E2C52;*/
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
