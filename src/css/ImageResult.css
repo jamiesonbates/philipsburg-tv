@@ -31,6 +31,11 @@ img {
   background-color: white;
 }
 
+.ImageResult-video-info h3, .ImageResult-video-info h5{
+  box-sizing: border-box;
+  padding: 1% 0;
+}
+
 .ImageResult-video {
   display: flex;
   flex-direction: row;
